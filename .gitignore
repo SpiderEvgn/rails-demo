@@ -15,6 +15,9 @@ tmp/*
 */.DS_Store
 .DS_Store
 
+# Do not git local env
+docker-compose.override.yml
+
 .ruby-version
 .ruby-gemset
 .byebug_history

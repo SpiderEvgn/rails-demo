@@ -1,14 +1,12 @@
 version: '2'
 services:
-  web:
-    build: .
+  web:    
+    image: registry.cn-shanghai.aliyuncs.com/aaron_dev/rails-demo
     command: bash -c "rm -f /app/tmp/pids/server.pid && rails s -p 3000 -b 0.0.0.0"
     volumes:
       - .:/app
-
-      # 这个 volume 可以利用 docker-compose run web bundle install 把所有 gem 装到本地查看代码。build 的时候不用
+      # 这个 volume 可以利用 docker-compose run web bundle install 把所有 gem 装到本地。build 的时候不用
       # - ../gems/rails-demo:/var/lib/gems
-      
     ports:
       - 3000:3000
     depends_on:

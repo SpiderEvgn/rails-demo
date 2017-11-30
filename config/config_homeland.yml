@@ -1,3 +1,5 @@
+# 这个文件是从 RubyChina 里拷贝过来做参考的，在这个项目并没有什么卵用
+
 site_configs: &site_configs
   # 导航栏 Logo 位置 HTML
   navbar_brand_html: |

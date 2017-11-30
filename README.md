@@ -26,7 +26,6 @@ Refer to Docker documentations for other platforms.
 
         docker exec railsdemo_web_1 bash -c "rake db:create && rake db:migrate && rake db:seed"
 
-6. Login with the dummy development user
+6. Now the local server is running at:
 
-           Email: simon.chen@corning.com
-        Password: password
+        http://localhost:3000
