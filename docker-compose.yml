@@ -7,7 +7,7 @@ services:
       - .:/app
 
       # 这个 volume 可以利用 docker-compose run web bundle install 把所有 gem 装到本地查看代码。build 的时候不用
-      # - ../gems/ruby_docker:/var/lib/gems
+      # - ../gems/rails-demo:/var/lib/gems
       
     ports:
       - 3000:3000
@@ -20,4 +20,4 @@ services:
   db:
     image: postgres
     volumes:
-      - ../db/ruby_docker:/var/lib/postgresql/data
+      - ../db/rails-demo:/var/lib/postgresql/data
