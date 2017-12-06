@@ -20,9 +20,11 @@ RUN apt-get update && apt-get install -y \
   imagemagick && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+
+ENV APP_HOME /app
+WORKDIR $APP_HOME
 
 RUN gem install bundler
-ADD Gemfile /app/Gemfile
-ADD Gemfile.lock /app/Gemfile.lock
+
+ADD Gemfile* $APP_HOME/
 RUN bundle install

@@ -29,3 +29,11 @@ Refer to Docker documentations for other platforms.
 6. Now the local server is running at:
 
         http://localhost:3000
+
+7. You can attach to the web console by:
+
+        docker attach railsdemo_web_1
+
+8. You can jump into the web container just like virtual machine, and run command like "rails c"
+
+        docker exec -it railsdemo_web_1 bash
